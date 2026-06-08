@@ -24,25 +24,38 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
-    <nav>
+    <!-- header starts -->
+    <header>
+      <!-- logo -->
       <div class="logo">
         <img src="./images/logo.svg" alt="Sneaker Company Logo" />
       </div>
-      <ul>
-        <li><a href=""> Collections </a></li>
-        <li><a href="">Men</a></li>
-        <li><a href="">Women</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
+
+      <nav>
+        <ul role="list" aria-label="navigation">
+          <li><a href=""> Collections </a></li>
+          <li><a href="">Men</a></li>
+          <li><a href="">Women</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+
       <div class="profile">
-        <img src="./images/icon-cart.svg" alt="shopping cart icon" />
+        <div class="cart-wrapper">
+          <img src="./images/icon-cart.svg" alt="shopping cart icon" />
+        </div>
         <img src="./images/image-avatar.png" alt="User Profile Picture" />
       </div>
-    </nav>
+    </header>
+    <!-- header ends -->
 
+    <!-- main section starts -->
     <main>
       <div class="left-column">
         <img src="./images/image-product-1.jpg" alt="product image" />
