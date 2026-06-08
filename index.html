@@ -29,63 +29,105 @@
     <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
-    <!-- header starts -->
-    <header>
-      <!-- logo -->
-      <div class="logo">
-        <img src="./images/logo.svg" alt="Sneaker Company Logo" />
-      </div>
-
-      <nav>
-        <ul role="list" aria-label="navigation">
-          <li><a href=""> Collections </a></li>
-          <li><a href="">Men</a></li>
-          <li><a href="">Women</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="profile">
-        <div class="cart-wrapper">
-          <img src="./images/icon-cart.svg" alt="shopping cart icon" />
-        </div>
-        <img src="./images/image-avatar.png" alt="User Profile Picture" />
-      </div>
-    </header>
-    <!-- header ends -->
-
-    <!-- main section starts -->
-    <main>
-      <div class="left-column">
-        <img src="./images/image-product-1.jpg" alt="product image" />
-        <div class="group">
-          <img src="./images/image-product-1.jpg" alt="product image" />
-          <img src="./images/image-product-2.jpg" alt="product image" />
-          <img src="./images/image-product-3.jpg" alt="product image" />
-          <img src="./images/image-product-4.jpg" alt="product image" />
-        </div>
-      </div>
-      <div class="right-column">
-        <h1>Sneaker Company</h1>
-        <h2>Fall Limited Edition Sneakers</h2>
-        <p>
-          These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they'll withstand everything
-          the weather can offer.
-        </p>
-        <p class="price" id="price">$125.00 <span>50%</span></p>
-        <p class="original-price">$250.00</p>
-        <div class="action">
-          <div class="quantity">
-            <button id="decrease">-</button>
-            <span id="quantity">0</span>
-            <button id="increase">+</button>
+    <div class="container">
+      <!-- header starts -->
+      <header>
+        <!-- logo -->
+        <div class="logo-nav">
+          <div class="logo">
+            <img src="./images/logo.svg" alt="Sneaker Company Logo" />
           </div>
-          <button id="add-to-cart">Add to Cart</button>
+
+          <nav>
+            <ul role="list" aria-label="navigation">
+              <li><a href=""> Collections </a></li>
+              <li><a href="">Men</a></li>
+              <li><a href="">Women</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </nav>
         </div>
-      </div>
-    </main>
+        <div class="profile">
+          <div class="cart-wrapper">
+            <img
+              src="./images/icon-cart.svg"
+              alt="shopping cart icon"
+              class="cart-icon"
+            />
+          </div>
+          <img
+            src="./images/image-avatar.png"
+            alt="User Profile Picture"
+            class="user-image"
+          />
+        </div>
+      </header>
+      <hr />
+      <!-- header ends -->
+
+      <!-- main section starts -->
+      <main>
+        <div class="left-column">
+          <img
+            src="./images/image-product-1.jpg"
+            alt="product image"
+            class="main-image"
+          />
+          <div class="group">
+            <img
+              src="./images/image-product-1.jpg"
+              alt="product image"
+              class="thumbnails"
+            />
+            <img
+              src="./images/image-product-2.jpg"
+              alt="product image"
+              class="thumbnails"
+            />
+            <img
+              src="./images/image-product-3.jpg"
+              alt="product image"
+              class="thumbnails"
+            />
+            <img
+              src="./images/image-product-4.jpg"
+              alt="product image"
+              class="thumbnails"
+            />
+          </div>
+        </div>
+        <div class="right-column">
+          <h1 class="sub-header">Sneaker Company</h1>
+          <h2 class="header">
+            Fall Limited Edition <br />
+            Sneakers
+          </h2>
+          <p class="text">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <p class="price" id="price">$125.00 <span>50%</span></p>
+          <p class="original-price">$250.00</p>
+          <div class="action">
+            <div class="quantity">
+              <button id="decrease">-</button>
+              <span id="quantity">0</span>
+              <button id="increase">+</button>
+            </div>
+            <button id="add-to-cart" class="btn">
+              <img
+                src="./images/icon-cart.svg"
+                alt="cart icon"
+                class="cart-icon"
+              />
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
 
     <footer class="attribution">
       Challenge by
