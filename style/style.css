@@ -198,6 +198,9 @@ nav ul {
   display: flex;
   gap: 1rem;
 }
+nav ul .close {
+  display: none;
+}
 nav ul li {
   list-style: none;
   color: var(--dark-grayish-blue);
