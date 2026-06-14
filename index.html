@@ -27,19 +27,42 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./style/style.css" />
+
+    <!-- script -->
+    <script src="./script/main.js" defer></script>
+    <script src="./script/gallery.js" defer></script>
+    <script src="./script/cart.js" defer></script>
   </head>
   <body>
     <div class="container">
       <!-- header starts -->
       <header>
+        <img
+          src="./images/icon-menu.svg"
+          alt="menu icon"
+          class="menu-icon"
+          id="menu-icon"
+        />
         <!-- logo -->
         <div class="logo-nav">
           <div class="logo">
             <img src="./images/logo.svg" alt="Sneaker Company Logo" />
           </div>
 
-          <nav>
-            <ul role="list" aria-label="navigation">
+          <nav id="nav">
+            <ul
+              role="list"
+              aria-label="navigation"
+              class="nav-bar"
+              id="nav-bar"
+            >
+              <li class="close" id="close-menu">
+                <img
+                  src="./images/icon-close.svg"
+                  alt="close menu icon"
+                  id="close-menu"
+                />
+              </li>
               <li><a href=""> Collections </a></li>
               <li><a href="">Men</a></li>
               <li><a href="">Women</a></li>
@@ -54,13 +77,26 @@
               src="./images/icon-cart.svg"
               alt="shopping cart icon"
               class="cart-icon"
+              id="cart-icon"
+            />
+            <span class="cart-status" id="cart-status">0</span>
+            <div class="cart-container" id="cart">
+              <div class="cart-title">Cart</div>
+              <div class="cart-items empty" id="cart-items">
+                <p class="cart-empty">Your cart is empty</p>
+              </div>
+              <button class="checkout empty btn" id="checkout-btn">
+                Checkout
+              </button>
+            </div>
+          </div>
+          <div class="user-image-wrap">
+            <img
+              src="./images/image-avatar.png"
+              alt="User Profile Picture"
+              class="user-image"
             />
           </div>
-          <img
-            src="./images/image-avatar.png"
-            alt="User Profile Picture"
-            class="user-image"
-          />
         </div>
       </header>
       <hr />
@@ -68,60 +104,145 @@
 
       <!-- main section starts -->
       <main>
+        <!-- main gallery -->
         <div class="left-column">
-          <img
-            src="./images/image-product-1.jpg"
-            alt="product image"
-            class="main-image"
-          />
+          <div class="main-img-wrapper">
+            <img
+              src="./images/image-product-1.jpg"
+              alt="product image"
+              class="main-image active"
+              id="main-image"
+            />
+            <img
+              src="./images/image-product-2.jpg"
+              alt="product image"
+              class="main-image"
+            />
+            <img
+              src="./images/image-product-3.jpg"
+              alt="product image"
+              class="main-image"
+            />
+            <img
+              src="./images/image-product-4.jpg"
+              alt="product image"
+              class="main-image"
+            />
+          </div>
           <div class="group">
             <div class="group-img">
               <img
-                src="./images/image-product-1.jpg"
+                src="./images/image-product-1-thumbnail.jpg"
                 alt="product image"
-                class="thumbnails"
+                class="thumbnails active"
               />
-              <div class="cover"></div>
             </div>
-            <div class="group-img">
+            <div class="group-img" id="2">
               <img
-                src="./images/image-product-2.jpg"
+                src="./images/image-product-2-thumbnail.jpg"
                 alt="product image"
                 class="thumbnails"
               />
-              <div class="cover"></div>
             </div>
-            <div class="group-img">
+            <div class="group-img" id="3">
               <img
-                src="./images/image-product-3.jpg"
+                src="./images/image-product-3-thumbnail.jpg"
                 alt="product image"
                 class="thumbnails"
               />
-              <div class="cover"></div>
             </div>
-            <div class="group-img">
+            <div class="group-img" id="4">
               <img
-                src="./images/image-product-4.jpg"
+                src="./images/image-product-4-thumbnail.jpg"
                 alt="product image"
                 class="thumbnails"
               />
-              <div class="cover"></div>
             </div>
           </div>
         </div>
+
+        <!-- lightbox  -->
+
+        <div class="lightbox" id="lightbox">
+          <div class="main-img-wrapper">
+            <span class="close-icon" id="lightbox-close-icon">
+              <img src="./images/icon-close.svg" alt="close icon" />
+            </span>
+            <span class="prev-icon" id="lightbox-prev-icon">
+              <img src="./images/icon-previous.svg" alt="prev icon" />
+            </span>
+            <span class="next-icon" id="lightbox-next-icon">
+              <img src="./images/icon-next.svg" alt="next icon" />
+            </span>
+            <img
+              src="./images/image-product-1.jpg"
+              alt="product image"
+              class="main-image active"
+            />
+            <img
+              src="./images/image-product-2.jpg"
+              alt="product image"
+              class="main-image"
+            />
+            <img
+              src="./images/image-product-3.jpg"
+              alt="product image"
+              class="main-image"
+            />
+            <img
+              src="./images/image-product-4.jpg"
+              alt="product image"
+              class="main-image"
+            />
+          </div>
+          <div class="group">
+            <div class="group-img">
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="product image"
+                class="thumbnails active"
+              />
+            </div>
+            <div class="group-img">
+              <img
+                src="./images/image-product-2-thumbnail.jpg"
+                alt="product image"
+                class="thumbnails"
+              />
+            </div>
+            <div class="group-img">
+              <img
+                src="./images/image-product-3-thumbnail.jpg"
+                alt="product image"
+                class="thumbnails"
+              />
+            </div>
+            <div class="group-img">
+              <img
+                src="./images/image-product-4-thumbnail.jpg"
+                alt="product image"
+                class="thumbnails"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- right column -->
         <div class="right-column">
           <h1 class="sub-header">Sneaker Company</h1>
-          <h2 class="header">
-            Fall Limited Edition <br />
-            Sneakers
-          </h2>
+          <h2 class="product">Fall Limited Edition Sneakers</h2>
           <p class="text">
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they'll withstand everything
             the weather can offer.
           </p>
-          <p class="price" id="price">$125.00 <span>50%</span></p>
-          <p class="original-price">$250.00</p>
+          <div class="all-price-wrap">
+            <div class="price-wrap">
+              <p class="price" id="price">$125.05</p>
+              <span class="discount">50%</span>
+            </div>
+            <p class="original-price">$250.00</p>
+          </div>
           <div class="action">
             <div class="quantity">
               <button id="decrease">-</button>
